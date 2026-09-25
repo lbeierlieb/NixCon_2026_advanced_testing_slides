@@ -1,0 +1,11 @@
+.slidev-layout h2 {
+  margin-bottom: 1.5rem;
+}
+
+.slidev-layout.compact h2 {
+  margin-bottom: 0.5rem;
+}
+
+.slidev-layout ul + :where(:not(ul, ol, li)) {
+  margin-top: 0.75rem;
+}

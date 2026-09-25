@@ -1,0 +1,32 @@
+...@style
+
+direction: right
+
+device: Device\n(client) {
+  class: vm
+}
+
+manufacturer: Manufacturer {
+  class: vm
+}
+
+rendezvous: Rendezvous {
+  class: vm
+}
+
+owner: Owner\n(mgmt service) {
+  class: vm
+}
+
+device -> manufacturer: DI\n(initialize, at factory) {
+  class: control
+}
+owner -> rendezvous: TO0\n(register) {
+  class: network
+}
+device -> rendezvous: TO1\n(locate owner) {
+  class: control
+}
+device -> owner: TO2\n(onboard) {
+  class: control
+}

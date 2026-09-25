@@ -1,0 +1,8 @@
+# Nix
+result
+result-*
+.direnv
+
+# Node / Slidev (slides/ also has its own .gitignore)
+node_modules
+dist
