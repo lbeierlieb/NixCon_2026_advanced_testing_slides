@@ -12,8 +12,12 @@
       system:
       let
         pkgs = import nixpkgs { inherit system; };
+        slides = pkgs.callPackage ./package.nix { };
       in
       {
+        packages.slides = slides;
+        packages.default = slides;
+
         devShells.default = pkgs.mkShell {
           packages = [
             pkgs.nodejs
